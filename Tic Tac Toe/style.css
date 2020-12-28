@@ -1,0 +1,44 @@
+.grid {
+    height: 20rem;
+    width: 20rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-row {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.cell {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: 1px solid maroon;
+    position: relative;
+}
+
+.cell::after {
+    transition: all 1s;
+}
+
+.cell:hover::after {
+    content: 'Tooltip';
+    position: absolute;
+    left: 110%;
+    border: 1px solid green;
+    transition: all 1s ease-in;
+    height: 2rem;
+}
+
+.piece {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: brown;
+}
